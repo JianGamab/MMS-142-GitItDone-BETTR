@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--REMINDER: This is just a template. Remove this once the title is replaced with the proper page title-->
     <title>Solo Product Page Template | BETTR</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <!--REMINDER: For custom css and js, make sure to update the link to the proper files-->
     <link rel="stylesheet" href="styles/style.css">
     <script src="js/script.js" defer></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
+    <!--navbar template: still to add the 'search' and 'mail' buttons at the end of the bar-->
     <nav class="navbar md:navbar-expand bg-1 py-3 border-bottom">
 
         <div class="container">
@@ -29,6 +32,8 @@
                     <h5 class="drawer-title" id="mainNavLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
                 </div>
+
+                <!--Having difficulty in recreating the exact layout in the mockup. This is the closest I can do-->
                 <div class="drawer-body">
                     <ul class="nav navbar-nav gap-2 md:gap-4">
                     <!--for other pages, just move the /class nav-link active aria-current="page"/ into the correct navbar link-->
@@ -41,17 +46,11 @@
                             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         </ul>
+                    </div>
 
+                    <!--REMINDER: to add 'search' and 'mail' button here-->
                     <div class="d-flex align-items-center gap-3">
-                            <button type="button" class="btn p-0 border-0 bg-transparent" aria-label="Search">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                                </svg>
-                            </button>
-                            <a href="contact.html" class="nav-link p-0" aria-label="Email or Contact">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-                                </svg>    
+                           
                     </div>
                 </div>
             </dialog>
@@ -60,49 +59,147 @@
     <header>
     </header>
     <main>
-        <section class="bg-2 py-3 px-12 mt-auto mx-12">
-            <div class="row g-2 mb-12 mt-12">
-                <div class="col-12 md:container md:row md:col-4 ms-auto">
-                    <ul class="list-unstyled d-flex md:row-gap-12 flex-column md:flex-column">
-                        <li class="md:container min-dvw-0 h-auto"><img src="images/cat001.jpg" alt="shirt-front-view" style="width: 120px; height: auto;"></li>
-                        <li class="md:container min-dvw-0 h-auto"><img src="images/cat002.jpg" alt="shirt-back-view" style="width: 120px; height: auto;"></li>
-                        <li class="md:container min-dvw-0 h-auto"><img src="images/cat003.jpg" alt="shirt-neckline" style="width: 120px; height: auto;"></li>
+        <section class="bg-2 py-8 px-4 md:px-12 my-12">
+            <div class="container">
+                <div class="row g-8 align-items-start">
+
+                
+                <div class="col-12 md:col-6 d-flex gap-4">
+                    <!--Leftmost: Thumbnails-->
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                    <li>
+                        <button type="button" class="btn p-0 border border-2 border-info rounded-0 thumbnail-btn" data-image="images/cat001.jpg" aria-label="View shirt front">
+                        <img src="images/cat001.jpg" alt="shirt-front-view" class="img-fluid d-block" style="width: 84px; height: auto;">
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn p-0 border rounded-0 thumbnail-btn" data-image="images/cat002.jpg" aria-label="View shirt back">
+                        <img src="images/cat002.jpg" alt="shirt-back-view" class="img-fluid d-block" style="width: 84px; height: auto;">
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn p-0 border rounded-0 thumbnail-btn" data-image="images/cat003.jpg" aria-label="View shirt neckline">
+                        <img src="images/cat003.jpg" alt="shirt-neckline" class="img-fluid d-block" style="width: 84px; height: auto;">
+                        </button>
+                    </li>
                     </ul>
+
+                    <!--Middle: Main Image-->
+                    <div class="flex-grow-1">
+                    <img id="main-product-image" src="images/cat001.jpg" alt="shirt-front-view" class="img-fluid w-100">
+                    </div>
                 </div>
-                <div class="col-12 md:col-4">
-                    <img src="images/cat001.jpg" alt="shirt-front-view">
-                </div>
-                <div class="col-12 md:col-4">
-                    <p>BETTR</p>
-                    <h2>Don't Be Late Tee</h2>
-                    <h3>&#8369; 499</h3>
-                    <p>Show Up. Get Moving.</p>
-                    <div>
-                        <h2>Select Size</h2>
-                        <div class="container g-4">
-                            <button type="button">XS</button>
-                            <button type="button">S</button>
-                            <button type="button">M</button>
-                            <button type="button">L</button>
-                            <button type="button">XL</button>
-                        </div>
-                        <h2>Select Quantity</h2>
-                        <!--Insert in div below quantity counter-->
-                        <div class="d-flex">
-                            <button type="button" aria-label="decrease quantity">-</button>
-                            <input type="number" id="shirtname-quantity" value="1" min="1" aria-label="quantity">
-                            <button type="button" aria-label="increase quantity">+</button>
+
+                <!--Rightmost: Product Details, Size Selection, Quantity Selection, and Order Now Button-->
+                <div class="col-12 md:col-6">
+                    <p class="text-uppercase text-muted small mb-1">BETTR</p>
+                    <h2 class="fw-bold mb-2">Don't Be Late Tee</h2>
+                    <h3 class="h5 fw-bold mb-2">₱ 499</h3>
+                    <p class="text-muted">Show Up. Get Moving.</p>
+
+                    <hr class="my-6">
+
+                    <!--Size Selection-->
+                    <div class="mb-6">
+                        <h3 class="h6 fw-semibold mb-3">Select Size</h3>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn border border-secondary-subtle rounded-0 px-4 py-2 size-btn">XS</button>
+                            <button type="button" class="btn border border-secondary-subtle rounded-0 px-4 py-2 size-btn">S</button>
+                            <button type="button" class="btn border border-secondary-subtle rounded-0 px-4 py-2 size-btn">M</button>
+                            <button type="button" class="btn border border-secondary-subtle rounded-0 px-4 py-2 size-btn">L</button>
+                            <button type="button" class="btn border border-secondary-subtle rounded-0 px-4 py-2 size-btn">XL</button>
                         </div>
                     </div>
+
+                    <!--Quantity Selection-->
+                    <div class="mb-6">
+                        <h3 class="h6 fw-semibold mb-3">Select Quantity</h3>
+                        <div class="d-inline-flex border">
+                            <button type="button" id="decrease-qty" class="btn btn-link text-dark text-decoration-none px-3" aria-label="decrease quantity">-</button>
+                            <input type="number" id="shirtname-quantity" value="1" min="1" aria-label="quantity" class="form-control border-0 text-center p-0" style="width: 48px;">
+                            <button type="button" id="increase-qty" class="btn btn-link text-dark text-decoration-none px-3" aria-label="increase quantity">+</button>
+                        </div>
+                    </div>
+
+                    <!--Order Now Button-->
+                    <div class="d-grid mb-3">
+                    <button type="button" id="order-now-btn" class="btn fw-semibold py-2 rounded-0" style="background-color: #82d4f7; color: #111;">
+                        Order Now
+                    </button>
+                    </div>
+
+                
+                    <p class="text-muted small d-flex align-items-start gap-2 mb-0">
+                    <span>ⓘ</span>
+                    <span>This will open a pre-filled email with your selected product, size, quantity and order details.</span>
+                    </p>
+                </div>
+
                 </div>
             </div>
         </section>
+        <section class="py-8 px-4 md:px-12 mb-12">
+        <div class="container">
+            <div class="row g-8 align-items-start">
+
+            
+            <div class="col-12 md:col-6">
+                <!-- Tab Navigation Bar -->
+                <ul class="nav border-secondary-subtle gap-6 mb-6" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button
+                    type="button"
+                    class="nav-link active px-0 pb-3 text-dark fw-semibold border-0 border-bottom border-2 border-info rounded-0 bg-transparent"
+                    aria-current="page"
+                    >
+                    Details
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button
+                    type="button"
+                    class="nav-link px-0 pb-3 text-muted border-0 rounded-0 bg-transparent"
+                    >
+                    Size Chart
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button
+                    type="button"
+                    class="nav-link px-0 pb-3 text-muted border-0 rounded-0 bg-transparent"
+                    >
+                    Care Instructions
+                    </button>
+                </li>
+                </ul>
+
+                <!--Tab Content: Details-->
+                <div>
+                <!--REMINDER: replace filler text with the correct text (see mockups in figma file)-->
+                <p class="text-muted mb-6">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit culpa quae recusandae, assumenda, non, explicabo repellat minima cum saepe obcaecati eos deserunt iure suscipit dignissimos nisi corrupti consequatur totam expedita.
+                </p>
+
+                </div>
+            </div>
+
+            
+            <div class="col-12 md:col-6 d-flex flex-row gap-4 py-12 ">
+                <img src="images/cat001.jpg" alt="Don't Be Late Tee front display" class="img-fluid w-100" style="width: 120px;height: auto;">
+                <img src="images/cat002.jpg" alt="Don't Be Late Tee back display" class="img-fluid w-100" style="width: 120px;height: auto;">
+                <img src="images/cat003.jpg" alt="Don't Be Late Tee detail display" class="img-fluid w-100" style="width: 120px;height: auto;">
+            </div>
+
+            </div>
+        </div>
+        </section>
+
     </main>
     <footer class="bg-1 py-5 mt-auto" id="contact">
-        <div class="container py-12">
+        <div class="container py-12 border-top">
             <div class="row g-4 mb-12 mt-2">
                 <div class="col-12 md:col-3">
-                    <!--insert logo-->
+                    <!--REMINDER: replace this span with BETTR logo-->
                     <span class="fw-bold fs-4 fg-1">BETTR</span>
                 </div>
                 <div class="col-12 md:col-3">

@@ -1,4 +1,24 @@
 /*PSEUDOCLASS*/
+:root {
+    --bs-body-font: 'Manrope', Georgia, 'Times New Roman', Times, serif;
+    --bs-heading-font: 'Montserrat', Arial, Helvetica, san-serif;
+    --primary: #72bee1; 
+}
+
+/*general stylesheet*/
+
+footer {
+    background-color: var(--primary);
+    border-color: black;
+}
+
+footer span, li {
+    color: black;
+}
+
+footer a {
+    color: black;
+}
 
 /*NAVBAR and HERO stylesheet*/
 .navbar-text {
@@ -17,4 +37,28 @@
 
 /*index.html SHOP / FEATURED PRODUCTS stylesheet*/
 
+/*Solo Product Page stylesheet*/
 
+.detail-gallery-img {
+    width: 160px;
+    height: auto;
+}
+/*Media queries*/
+
+@media screen and (max-width: 1024px) {
+    .detail-gallery-img {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .detail-gallery-img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .detail-gallery-img {
+        width: 80px;
+    }
+}
